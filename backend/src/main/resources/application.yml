@@ -9,9 +9,9 @@ spring:
     name: uniflat-backend
 
   datasource:
-    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:uniflat}?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-    username: ${DB_USERNAME:root}
-    password: ${DB_PASSWORD}
+    url: jdbc:mysql://${TIDB_HOST:${DB_HOST:localhost}}:${TIDB_PORT:${DB_PORT:4000}}/${TIDB_NAME:${DB_NAME:uniflat}}?useSSL=true&requireSSL=true&serverTimezone=UTC
+    username: ${TIDB_USER:${DB_USERNAME:root}}
+    password: ${TIDB_PASSWORD:${DB_PASSWORD}}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
