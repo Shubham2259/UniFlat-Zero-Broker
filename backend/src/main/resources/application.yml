@@ -42,7 +42,7 @@ spring:
 
 app:
   jwt:
-    secret: ${JWT}
+    secret: ${JWT_SECRET}
     expiration-milliseconds: 86400000
 
 cors:
